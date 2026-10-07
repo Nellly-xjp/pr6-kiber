@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "username": "admin",
+    "passwordHash": "$2a$10$wT1EThXjL01B/W19/sR03eYn0HnO7vT5.1fMsz5e8Gg1/M4838GjS",
+    "role": "ADMIN",
+    "bio": "Адміністратор системи"
+  },
+  {
+    "id": "2",
+    "username": "user",
+    "passwordHash": "$2a$10$S9V9Gf1YQJ5V3Q.B3r4G1.eJ/k8I3z33G/3.1x4I1G9v3X.K1H2W2",
+    "role": "USER",
+    "bio": "Звичайний користувач"
+  },
+  {
+    "id": "bd1a93fd-14ab-4bcf-b8f0-c48f541dda34",
+    "username": "username",
+    "passwordHash": "$2b$10$104KM8ZPD8pfqG10SjF2tusKv2RItB3VFVrkeuWn5pPndeKGWwonq",
+    "role": "USER",
+    "bio": "Ласкаво просимо до профілю!"
+  }
+]

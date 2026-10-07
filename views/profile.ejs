@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Профіль користувача</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2>Профіль користувача</h2>
+      
+      <p><strong>Ім'я користувача:</strong> <%= user ? user.username : '' %></p>
+      <p><strong>Про себе:</strong> <%= user ? user.bio : '' %></p>
+
+      <hr>
+
+      <h3>Оновити статус</h3>
+      <form action="/profile/update" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <div class="form-group">
+          <input type="text" name="bio" placeholder="Введіть новий статус..." required>
+        </div>
+        <button type="submit" class="btn btn-primary">Зберегти</button>
+      </form>
+
+      <br>
+      <a href="/logout" class="btn btn-secondary">Вийти</a>
+    </div>
+  </div>
+</body>
+</html>

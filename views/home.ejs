@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Особистий кабінет</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Вітаємо, <%= currentUser.username %>!</h2>
+    <p>Ваша роль: <strong><%= currentUser.role %></strong></p>
+
+    <nav>
+      <a href="/profile" class="btn">Профіль</a>
+      <% if (currentUser.role === 'ADMIN') { %>
+        <a href="/admin" class="btn btn-admin">Панель адміністратора</a>
+      <% } %>
+    </nav>
+
+    <form action="/logout" method="POST" style="margin-top: 20px;">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <button type="submit" class="btn btn-danger">Вийти</button>
+    </form>
+  </div>
+</body>
+</html>

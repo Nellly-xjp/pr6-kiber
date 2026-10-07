@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Головна - Практична 6</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Веб-застосунок безпеки</h1>
+    <% if (currentUser) { %>
+      <p>Ви увійшли як: <strong><%= currentUser.username %></strong> (<%= currentUser.role %>)</p>
+      <a href="/home" class="btn">До кабінету</a>
+    <% } else { %>
+      <a href="/login" class="btn">Увійти</a>
+      <a href="/register" class="btn">Зареєструватися</a>
+    <% } %>
+  </div>
+</body>
+</html>
